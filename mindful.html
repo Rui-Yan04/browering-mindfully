@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Take a Moment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000000;
+      text-align: center;
+      color: white;
+    }
+    
+    .breathing-circle {
+      width: 300px;
+      height: 300px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 60px;
+      animation: breathe 5s infinite alternate ease-in-out;
+    }
+    
+    @keyframes breathe {
+      0% {
+        transform: scale(0.8);
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      100% {
+        transform: scale(1.2);
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+    
+    h1 {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+    
+    p {
+      max-width: 600px;
+      margin-bottom: 30px;
+      line-height: 1.8;
+      font-size: 24px;
+    }
+    
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+    
+    button:hover {
+      background-color: #388e3c;
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="breathing-circle"></div>
+  
+  <h1>Take a Mindful Moment</h1>
+  
+  <p>Close your eyes, take a deep breath, and ask yourself:</p>
+  <p>"Do I really want to visit this site, or am I just feeling addicted to it?"</p>
+  
+  <div class="buttons">
+    <button id="continue">Yes, I want to continue</button>
+    <button id="back">No, take me back</button>
+  </div>
+  
+  <script src="mindful.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mindful Browsing</title>
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    button {
+      margin-left: 10px;
+    }
+    #add-form {
+      display: flex;
+      margin-top: 10px;
+    }
+    #new-site {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mindful Browsing</h1>
+  <p>Add websites you want to be mindful about:</p>
+  
+  <ul id="sites-list"></ul>
+  
+  <div id="add-form">
+    <input type="text" id="new-site" placeholder="e.g., facebook.com">
+    <button id="add-button">Add</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

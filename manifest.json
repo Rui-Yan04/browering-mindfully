@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Mindful Browsing",
+  "version": "1.0",
+  "description": "Helps you be more mindful of your browsing habits",
+  "permissions": ["storage", "webNavigation", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
