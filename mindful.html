@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>Take a Moment</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+
+  <!-- At the top of your HTML file, add this meta tag in the <head> section -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -82,11 +86,8 @@
   <p>Close your eyes, take a deep breath, and ask yourself:</p>
   <p>"Do I really want to visit this site, or am I just feeling addicted to it?"</p>
   
-  <div class="buttons">
-    <button id="continue">Yes, I want to continue</button>
-    <button id="back">No, take me back</button>
-  </div>
-  
+  <button id="continue" " >Yes, I want to continue</button>
+  <button id="back" ">No, take me back</button>
   <script src="mindful.js"></script>
-</body>
+  </body>
 </html>
