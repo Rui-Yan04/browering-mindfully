@@ -4,7 +4,6 @@
   <title>Take a Moment</title>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
-
   <!-- At the top of your HTML file, add this meta tag in the <head> section -->
   <style>
     body {
@@ -21,8 +20,8 @@
     }
     
     .breathing-circle {
-      width: 300px;
-      height: 300px;
+      width: 400px;
+      height: 400px;
       background-color: #ffffff;
       border-radius: 50%;
       display: flex;
@@ -49,45 +48,64 @@
     }
     
     p {
-      max-width: 600px;
-      margin-bottom: 30px;
-      line-height: 1.8;
-      font-size: 24px;
-    }
-    
+  width: 100%;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Left-align text */
+  margin-left: auto; /* Center the paragraphs */
+  margin-right: auto;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  text-indent: 0px;
+  padding-left: 25%;
+}
+
+p:first-of-type {
+  font-size: 24px;
+  margin-bottom: 5px; /* Minimal space between paragraphs */
+}
+
+p:last-of-type {
+  font-size: 30px;
+  margin-bottom: 30px; /* Space after the second paragraph */
+} 
     button {
       padding: 15px 30px;
       font-size: 18px;
-      background-color: #4caf50;
+      background-color: #000000;
       color: white;
-      border: none;
+      border: 2px solid white;
       border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s;
       margin: 10px;
+      width: 250px;
     }
     
     button:hover {
-      background-color: #388e3c;
+      background-color: #333333;
     }
     
     .buttons {
       display: flex;
-      gap: 30px;
+      flex-direction: row;
+      gap: 20px;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div class="breathing-circle"></div>
+ 
+  <p>Close your eyes, <span style="color: orange; font-weight: bold;">take a deep breath</span>, and ask yourself:</p>
+<p>Do I <span style="color: #FFD700; font-weight: bold;">really want to</span> visit this site, or am I just feeling addicted to it?</p>
   
-  <h1>Take a Mindful Moment</h1>
+  <div class="buttons">
+    <button id="continue">Yes, I want to continue</button>
+    <button id="back">No, take me back</button>
+  </div>
   
-  <p>Close your eyes, take a deep breath, and ask yourself:</p>
-  <p>"Do I really want to visit this site, or am I just feeling addicted to it?"</p>
-  
-  <button id="continue" " >Yes, I want to continue</button>
-  <button id="back" ">No, take me back</button>
   <script src="mindful.js"></script>
-  </body>
+</body>
 </html>
