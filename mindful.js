@@ -73,3 +73,23 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('beforeunload', function(event) {
   console.log("Page is about to unload");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const continueButton = document.getElementById("continue");
+  let countdown = 30;
+
+  // Disable button initially
+  continueButton.disabled = true;
+  continueButton.innerText = `Wait ${countdown}s`;
+
+  // Countdown function
+  const timer = setInterval(function () {
+    countdown--;
+    continueButton.innerText = countdown > 0 ? `Wait ${countdown}s` : "Yes, I want to continue";
+
+    if (countdown <= 0) {
+      clearInterval(timer);
+      continueButton.disabled = false;
+    }
+  }, 1000);
+});
